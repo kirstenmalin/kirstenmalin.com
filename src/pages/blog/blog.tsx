@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react';
-import Post from '../../components/post';
+import Post from '#components/post';
 import blogPosts from './blog-posts';
 
 export default function Blog(): ReactNode {
