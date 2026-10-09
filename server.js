@@ -14,9 +14,9 @@ try {
   const privateKey  = await fs.readFile(path.join(import.meta.dirname, '../kirstenmalin.com.key'), 'utf8');
   const certificate = await fs.readFile(path.join(import.meta.dirname, '../kirstenmalin.com.cert'), 'utf8');
   if (privateKey && certificate) {
-    credentials = {key: privateKey, cert: certificate};
+    credentials = { key: privateKey, cert: certificate };
   }
-} catch (error) {
+} catch {
   console.info('No certificate or private key found. Running in http mode.');
 }
 

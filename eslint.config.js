@@ -90,6 +90,7 @@ export default defineConfig([
           allowSamePrecedence: true,
         },
       ],
+      '@stylistic/object-curly-spacing': ['warn', 'always'],
       '@stylistic/operator-linebreak': [
         'error',
         'after',
