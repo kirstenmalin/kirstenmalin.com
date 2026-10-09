@@ -1,0 +1,15 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.siteName {
+	color: var(--primary);
+	font-size: 2rem;
+	margin: 0;
+}
+
+.navigation ul {
+  display: flex;
+  list-style-type: none;
+}
