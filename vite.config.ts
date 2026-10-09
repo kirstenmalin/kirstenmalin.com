@@ -1,14 +1,19 @@
-import { defineConfig } from 'vite';
-import react, { reactCompilerPreset } from '@vitejs/plugin-react';
-import babel from '@rolldown/plugin-babel';
 import path from 'node:path';
+import { defineConfig } from 'vite';
+import { reactRouter } from '@react-router/dev/vite';
+import babel from '@rolldown/plugin-babel';
+import react, { reactCompilerPreset } from '@vitejs/plugin-react';
 
 export default defineConfig(({ isSsrBuild }) => ({
   build: {
     copyPublicDir: !isSsrBuild,
   },
+  optimizeDeps: {
+    exclude: ['virtual:react-router/server-build'],
+  },
   plugins: [
     react(),
+    reactRouter(),
     babel({
       presets: [reactCompilerPreset()]
     }),

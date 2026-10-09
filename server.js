@@ -5,6 +5,7 @@ import http from 'node:http';
 import https from 'node:https';
 import os from 'node:os';
 import path from 'node:path';
+import { createRequestHandler } from '@react-router/express';
 
 const DEVELOPMENT = process.env.NODE_ENV === 'development';
 const port = process.env.PORT || 26675;
@@ -20,10 +21,6 @@ try {
   console.info('No certificate or private key found. Running in http mode.');
 }
 
-const templateHtml = DEVELOPMENT
-  ? ''
-  : await fs.readFile(path.join(import.meta.dirname, '/dist/client/index.html'), 'utf-8');
-
 const app = express();
 
 /** @type {import('vite').ViteDevServer | undefined} */
@@ -36,22 +33,24 @@ if (DEVELOPMENT) {
     base,
   });
   app.use(vite.middlewares);
-  app.use('*all', async (req, res, next) => {
-    try {
-      const source = await viteDevServer.ssrLoadModule('/src/entry-server.tsx');
-      return await source.app(req, res, next);
-    } catch (e) {
-      vite.ssrFixStacktrace(e);
-      console.log(e.stack);
-      next(error);
-    }
-  });
+  app.use(
+    createRequestHandler({
+      build: () =>
+        vite.ssrLoadModule(
+          'virtual:react-router/server-build',
+        ),
+    }),
+  );
 } else {
   const compression = (await import('compression')).default;
   const sirv = (await import('sirv')).default;
   app.use(compression());
   app.use(base, sirv(path.join(import.meta.dirname, '/dist/client'), { extensions: [] }));
-  app.use(await import('./dist/server/entry-server.js').then((mod) => mod.app));
+  app.use(
+    createRequestHandler({
+      build: await import('./dist/server/index.js'),
+    }),
+  );
 }
 
 const server = DEVELOPMENT || !credentials
