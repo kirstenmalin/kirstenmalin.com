@@ -1,17 +1,18 @@
 import { defineConfig } from 'eslint/config';
 import globals from 'globals';
 import js from '@eslint/js';
+import json from '@eslint/json';
 import eslintReact from '@eslint-react/eslint-plugin';
 import stylistic from '@stylistic/eslint-plugin';
 import ts from '@typescript-eslint/eslint-plugin';
 import tsParser from '@typescript-eslint/parser';
 
 export default defineConfig([
-  js.configs.recommended,
   {
     ignores: ['dist/', 'node_modules/'],
   },
   {
+    ...js.configs.recommended,
     files: ['**/*.{js,ts}*(x)'],
     languageOptions: {
       globals: {
@@ -108,5 +109,21 @@ export default defineConfig([
       ],
       semi: ['error', 'always'],
     },
+  },
+  {
+    ...json.configs.recommended,
+    ...json.configs.parser,
+    files: ['**/*.json'],
+    ignores: ['package-lock.json'],
+    language: 'json/json',
+    plugins: { 'json': json }
+  },
+  {
+    ...json.configs.recommended,
+    ...json.configs.parser,
+    // these files allow comments
+    files: ['./tsconfig*.json'],
+    language: 'json/jsonc',
+    plugins: { 'json': json }
   }
 ]);
