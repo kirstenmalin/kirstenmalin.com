@@ -1,12 +1,17 @@
-import { StrictMode } from 'react';
-import { renderToString } from 'react-dom/server';
-import App from './app';
+import { RouterContextProvider } from 'react-router';
+import { createRequestHandler } from '@react-router/express';
+import express from 'express';
+import { valueFromExpressContext } from './context';
 
-export function render(url: string) {
-  const html = renderToString(
-    <StrictMode>
-      <App path={url} />
-    </StrictMode>,
-  );
-  return { html };
-}
+export const app = express();
+
+app.use(
+  createRequestHandler({
+    build: () => import('virtual:react-router/server-build'),
+    getLoadContext() {
+      const context = new RouterContextProvider();
+      context.set(valueFromExpressContext, 'what should go here?');
+      return context;
+    },
+  }),
+);

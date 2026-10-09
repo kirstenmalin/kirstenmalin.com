@@ -6,7 +6,7 @@ import https from 'node:https';
 import os from 'node:os';
 import path from 'node:path';
 
-const isProduction = process.env.NODE_ENV === 'production';
+const DEVELOPMENT = process.env.NODE_ENV === 'development';
 const port = process.env.PORT || 26675;
 const base = process.env.BASE || '/';
 let credentials;
@@ -20,15 +20,15 @@ try {
   console.info('No certificate or private key found. Running in http mode.');
 }
 
-const templateHtml = isProduction
-  ? await fs.readFile(path.join(import.meta.dirname, '/dist/client/index.html'), 'utf-8')
-  : '';
+const templateHtml = DEVELOPMENT
+  ? ''
+  : await fs.readFile(path.join(import.meta.dirname, '/dist/client/index.html'), 'utf-8');
 
 const app = express();
 
 /** @type {import('vite').ViteDevServer | undefined} */
 let vite;
-if (!isProduction) {
+if (DEVELOPMENT) {
   const { createServer } = await import('vite');
   vite = await createServer({
     server: { middlewareMode: true },
@@ -36,48 +36,27 @@ if (!isProduction) {
     base,
   });
   app.use(vite.middlewares);
+  app.use('*all', async (req, res, next) => {
+    try {
+      const source = await viteDevServer.ssrLoadModule('/src/entry-server.tsx');
+      return await source.app(req, res, next);
+    } catch (e) {
+      vite.ssrFixStacktrace(e);
+      console.log(e.stack);
+      next(error);
+    }
+  });
 } else {
   const compression = (await import('compression')).default;
   const sirv = (await import('sirv')).default;
   app.use(compression());
   app.use(base, sirv(path.join(import.meta.dirname, '/dist/client'), { extensions: [] }));
+  app.use(await import('./dist/server/entry-server.js').then((mod) => mod.app));
 }
 
-app.use('*all', async (req, res) => {
-  try {
-    const url = req.originalUrl.replace(base, '');
-
-    /** @type {string} */
-    let template,
-      /** @type {import('./src/entry-server.ts').render} */
-      render;
-    if (!isProduction) {
-      // Always read fresh template in development
-      template = await fs.readFile('./index.html', 'utf-8');
-      template = await vite.transformIndexHtml(url, template);
-      render = (await vite.ssrLoadModule('/src/entry-server.tsx')).render;
-    } else {
-      template = templateHtml;
-      render = (await import(path.join(import.meta.dirname, '/dist/server/entry-server.js'))).render;
-    }
-
-    const rendered = render(url);
-
-    const html = template
-      .replace('<!--app-head-->', rendered.head ?? '')
-      .replace('<!--app-html-->', rendered.html ?? '');
-
-    res.status(200).set({ 'Content-Type': 'text/html' }).send(html);
-  } catch (e) {
-    vite?.ssrFixStacktrace(e);
-    console.log(e.stack);
-    res.status(500).end(e.stack);
-  }
-});
-
-const server = isProduction && credentials
-  ? https.createServer(credentials, app)
-  : http.createServer(app);
+const server = DEVELOPMENT || !credentials
+  ? http.createServer(app)
+  : https.createServer(credentials, app);
 
 server.listen(port, (error) => {
   if (error) {

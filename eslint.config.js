@@ -52,6 +52,7 @@ export default defineConfig([
         },
       ],
       '@stylistic/arrow-parens': ['warn', 'always'],
+      '@stylistic/eol-last': ['error', 'always'],
       '@stylistic/function-paren-newline': ['error', 'consistent'],
       '@stylistic/implicit-arrow-linebreak': ['off'],
       '@stylistic/indent': [
