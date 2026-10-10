@@ -1,15 +1,17 @@
 import type { ReactNode } from 'react';
 import Link from '#components/link';
-import styles from './header.module.css';
 import type { HeaderProps } from './header.types';
+import styles from './header.module.css';
 
 export default function Header({ path }: HeaderProps): ReactNode {
+  const NameWrapper = path === '' ? 'h1' : 'div';
+
   return (
     <header className={styles.header}>
-      <div>
+      <NameWrapper>
         <p className={styles.siteName}>Kirsten Malin</p>
         <p className={styles.tagline}>Frontend Software Engineer</p>
-      </div>
+      </NameWrapper>
       <nav className={styles.navigation}>
         <ul>
           <li><Link ariaCurrent={path === '' ? 'page' : undefined} href="/">Home</Link></li>
