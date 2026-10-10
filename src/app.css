@@ -1,53 +1,28 @@
-@font-face {
-  font-family: AtkinsonHyperlegibleNext;
-  src: url('/fonts/AtkinsonHyperlegibleNext-Regular.woff2');
-  font-style: normal;
-  font-weight: normal;
-}
-
-
-:root {
-  --background: #ffffff;
-  --primary: #4e159f;
-  --text: #0a0a0a;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #000f01;
-    --primary: #caaaf7;
-    --text: #f0f0f0;
-  }
-
-  html {
-    color-scheme: dark;
-  }
-}
+@import './styles/colors.css';
+@import './styles/fonts.css';
+@import './styles/vars.css';
 
 html {
   height: 100%;
 }
 
 body {
-  background-color: var(--background);
+  background-color: var(--color-background);
   box-sizing: border-box;
   font-family: AtkinsonHyperlegibleNext, Tahoma, Verdana, sans-serif;
   margin: 0;
   min-height: 100svh;
   padding: 4px;
-}
 
-@media (width >= 450px) {
-  body {
+  @media (width >= 450px) {
     padding: 1rem;
   }
-}
 
-@media (width >= 600px) {
-  body {
+  @media (width >= 600px) {
     padding: 2rem;
   }
 }
+
 
 h1,
 h2,
@@ -55,7 +30,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: var(--primary);
+  color: var(--color-primary);
   font-weight: normal;
   margin: 0;
 }

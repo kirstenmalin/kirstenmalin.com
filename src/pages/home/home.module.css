@@ -1,0 +1,6 @@
+.intro {
+  border-bottom: solid 3px var(--color-secondary-light);
+  font-size: 1.2rem;
+  margin-bottom: 4rem;
+  padding: 0 0 5rem;
+}

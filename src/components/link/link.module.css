@@ -1,0 +1,21 @@
+.link {
+  border-radius: var(--border-radius);
+  color: var(--color-primary);
+  outline: solid 2px transparent;
+  outline-offset: 0.25em;
+  padding: 0.5em;
+  text-decoration-color: var(--color-primary-light);
+  text-decoration-thickness: 0.125em;
+  text-underline-position: under;
+  transition: outline-color ease-in-out 0.2s;
+
+  &:focus-visible {
+    outline-color: var(--color-primary-light);
+  }
+
+  &[aria-current="page"] {
+    background-color: var(--color-primary);
+    color: var(--color-text-inverted);
+    text-decoration-color: var(--color-text-inverted);
+  }
+}

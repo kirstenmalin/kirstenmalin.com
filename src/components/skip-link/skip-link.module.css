@@ -1,0 +1,15 @@
+.skipLink {
+  background-color: var(--color-background);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow-primary);
+  font-size: 1.2em;
+  left: 2em;
+  padding: 1em;
+  position: fixed;
+  top: -6em;
+  transition: top ease-in-out 300ms;
+
+  &:focus-within {
+    top: 2em;
+  }
+}

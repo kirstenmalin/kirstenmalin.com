@@ -1,0 +1,7 @@
+:root {
+  --border-radius: 0.3em;
+  --box-shadow-primary: 2px 2px 5px 3px var(--color-primary-lighter, black);
+  --box-shadow-secondary-small: 1px 1px 0 0 var(--color-secondary-lighter, black);
+  --max-page-width: 1200px;
+}
+

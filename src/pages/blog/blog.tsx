@@ -1,12 +1,14 @@
 import type { ReactNode } from 'react';
+import H1 from '#components/h1';
+import Main from '#components/main';
 import Post from '#components/post';
-import blogPosts from './blog-posts';
+import blogPosts from '#data/blog-posts';
 
 export default function Blog(): ReactNode {
   return (
-    <main>
-      <h1>Blog</h1>
+    <Main>
+      <H1>Blog</H1>
       { blogPosts.map((post) => <Post key={post.date} {...post} />) }
-    </main>
+    </Main>
   );
 }

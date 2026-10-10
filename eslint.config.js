@@ -1,5 +1,6 @@
 import { defineConfig } from 'eslint/config';
 import globals from 'globals';
+import css from '@eslint/css';
 import js from '@eslint/js';
 import json from '@eslint/json';
 import eslintReact from '@eslint-react/eslint-plugin';
@@ -117,7 +118,7 @@ export default defineConfig([
     files: ['**/*.json'],
     ignores: ['package-lock.json'],
     language: 'json/json',
-    plugins: { 'json': json }
+    plugins: { json }
   },
   {
     ...json.configs.recommended,
@@ -125,6 +126,11 @@ export default defineConfig([
     // these files allow comments
     files: ['./tsconfig*.json'],
     language: 'json/jsonc',
-    plugins: { 'json': json }
+    plugins: { json }
+  },
+  {
+    files: ['**/*.css'],
+    language: 'css/css',
+    plugins: { css }
   }
 ]);

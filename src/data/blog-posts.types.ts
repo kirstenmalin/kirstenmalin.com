@@ -1,15 +1,20 @@
-import type { ReactNode } from 'react';
-
 export type Tag =
   'accessibility' |
   'components' |
   'design' |
   'job search' |
+  'mvp' |
   'portfolio' |
-  'react';
+  'react' |
+  'react-router' |
+  'ssr'
+  ;
 
 export type BlogPost = {
-  content: ReactNode;
+  /**
+   * The post content, where each paragraph is a string in the array
+   */
+  content: string[];
   /**
    * ISO date string yyyy-mm-dd
    */

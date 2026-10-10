@@ -1,15 +1,47 @@
 .header {
+  border-bottom: solid 3px var(--color-secondary-light);
   display: flex;
+  flex-direction: column;
+  gap: 1rem;
   justify-content: space-between;
+  margin: 0 auto 2rem;
+  max-width: var(--max-page-width);
+  padding-bottom: 0.5rem;
+
+  @media (width >= 750px) {
+    flex-direction: row;
+    gap: 2rem;
+  }
 }
 
 .siteName {
-	color: var(--primary);
-	font-size: 2rem;
+	color: var(--color-primary);
+	font-size: 1.7rem;
 	margin: 0;
 }
 
-.navigation ul {
+.tagline {
+  color: var(--color-secondary);
+  font-size: 1rem;
+  margin: 0;
+}
+
+.navigation {
+  align-items: center;
   display: flex;
-  list-style-type: none;
+  font-size: 1.25rem;
+  justify-content: flex-end;
+
+  ul {
+    display: flex;
+    gap: 0.5rem;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+  }
+
+  a {
+    display: inline-block;
+  }
 }
