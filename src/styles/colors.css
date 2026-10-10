@@ -2,6 +2,7 @@
  * Color scheme
  * All main colors, -dark, and -darker, as well as primary-light and secondary-light, have >4.5:1 contrast against white.
  * tertiary-light has >3:1 against white.
+ * All -lighter colors have >4.5:1 against black.
  */
 
 :root {

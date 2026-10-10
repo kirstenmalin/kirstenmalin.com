@@ -1,5 +1,5 @@
 .link {
-  border-radius: 0.25em;
+  border-radius: var(--border-radius);
   color: var(--color-primary);
   outline: solid 2px transparent;
   outline-offset: 0.25em;

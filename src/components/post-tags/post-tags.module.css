@@ -1,0 +1,13 @@
+.postTags {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.postTag {
+  background-color: var(--color-primary-lighter);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow-secondary-small);
+  display: inline-block;
+  font-size: 1rem;
+  padding: 0.4em 0.6em;
+}
