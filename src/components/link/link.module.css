@@ -1,9 +1,14 @@
 .link {
   border-radius: 0.125em;
   color: var(--primary);
+  outline: solid 2px transparent;
+  outline-offset: 0.5rem;
+  text-decoration-color: var(--primary-light);
+  text-decoration-thickness: 0.125em;
+  text-underline-position: under;
+  transition: outline-color ease-in-out 0.2s;
 
   &:focus-visible {
-    outline: solid 2px var(--primary-light);
-    outline-offset: 0.5rem;
+    outline-color: var(--primary-light);
   }
 }

@@ -5,7 +5,10 @@ import styles from './header.module.css';
 export default function Header(): ReactNode {
   return (
     <header className={styles.header}>
-      <p className={styles.siteName}>Kirsten Malin</p>
+      <div>
+        <p className={styles.siteName}>Kirsten Malin</p>
+        <p className={styles.tagline}>Frontend Software Engineer</p>
+      </div>
       <nav className={styles.navigation}>
         <ul>
           <li><Link href="/">Home</Link></li>
