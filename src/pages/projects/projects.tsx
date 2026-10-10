@@ -1,5 +1,10 @@
 import type { ReactElement } from 'react';
+import Main from '#components/main';
 
 export default function Projects(): ReactElement {
-  return (<div>Projects</div>);
+  return (
+    <Main>
+      Projects
+    </Main>
+  );
 }

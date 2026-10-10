@@ -1,9 +1,10 @@
 import type { ReactNode } from 'react';
+import Main from '#components/main';
 
 export default function Home(): ReactNode {
   return (
-    <main>
-      {/* Home page */}
-    </main>
+    <Main>
+      Home page
+    </Main>
   );
 }

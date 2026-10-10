@@ -1,5 +1,9 @@
 export type LinkProps = {
   /**
+   * Sets the aria-current value; used for nav links
+   */
+  ariaCurrent?: 'page';
+  /**
    * The text to display in the link
    */
   children: string;

@@ -8,7 +8,7 @@ import styles from './link.module.css';
  * it gets the attribute target="_blank"
  * it gets an aria-label that appends "Opens in a new tab." to the link text
  */
-export default function Link({ children, href }: LinkProps): ReactElement {
+export default function Link({ ariaCurrent, children, href }: LinkProps): ReactElement {
   let target, ariaLabel;
   if (href.slice(0, 4) === 'http') {
     target = '_blank';
@@ -16,6 +16,7 @@ export default function Link({ children, href }: LinkProps): ReactElement {
   }
   return (
     <a
+      aria-current={ariaCurrent}
       aria-label={ariaLabel}
       className={styles.link}
       href={href}

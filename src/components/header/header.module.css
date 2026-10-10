@@ -1,21 +1,21 @@
 .header {
-  border-bottom: solid 3px var(--secondary-light);
+  border-bottom: solid 3px var(--color-secondary-light);
   display: flex;
   gap: 2rem;
   justify-content: space-between;
   margin: 0 auto 2rem;
-  max-width: 1200px;
+  max-width: var(--max-page-width);
   padding-bottom: 0.5rem;
 }
 
 .siteName {
-	color: var(--primary);
+	color: var(--color-primary);
 	font-size: 2rem;
 	margin: 0;
 }
 
 .tagline {
-  color: var(--secondary);
+  color: var(--color-secondary);
   font-size: 1rem;
   margin: 0;
 }
@@ -27,7 +27,7 @@
 
   ul {
     display: flex;
-    gap: 1rem;
+    gap: 0.5rem;
     list-style-type: none;
     margin: 0;
     padding: 0;

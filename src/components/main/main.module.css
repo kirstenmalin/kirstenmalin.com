@@ -1,0 +1,12 @@
+.main {
+  border-radius: 0.125rem;
+  margin: 0 auto;
+  max-width: var(--max-page-width);
+  outline: solid 2px transparent;
+  outline-offset: 0.5rem;
+  transition: outline-color ease-in-out 0.2s;
+
+  &:focus-visible {
+    outline-color: var(--color-primary-light);
+  }
+}

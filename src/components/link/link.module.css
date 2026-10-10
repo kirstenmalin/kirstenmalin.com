@@ -1,14 +1,21 @@
 .link {
-  border-radius: 0.125em;
-  color: var(--primary);
+  border-radius: 0.25em;
+  color: var(--color-primary);
   outline: solid 2px transparent;
-  outline-offset: 0.5rem;
-  text-decoration-color: var(--primary-light);
+  outline-offset: 0.25em;
+  padding: 0.5em;
+  text-decoration-color: var(--color-primary-light);
   text-decoration-thickness: 0.125em;
   text-underline-position: under;
   transition: outline-color ease-in-out 0.2s;
 
   &:focus-visible {
-    outline-color: var(--primary-light);
+    outline-color: var(--color-primary-light);
+  }
+
+  &[aria-current="page"] {
+    background-color: var(--color-primary);
+    color: var(--color-text-inverted);
+    text-decoration-color: var(--color-text-inverted);
   }
 }
