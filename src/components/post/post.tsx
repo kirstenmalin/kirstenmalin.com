@@ -8,7 +8,7 @@ export default function Post({ content, date, tags, title }: BlogPost): ReactNod
     <article className={styles.post}>
       <h2 className={styles.postTitle}>{title}</h2>
       <p>{date}</p>
-      { content.map((paragraph) => <p>{paragraph}</p>) }
+      { content.map((paragraph) => <p key={paragraph.slice(0,10)}>{paragraph}</p>) }
       <PostTags tags={tags} />
     </article>
   );
