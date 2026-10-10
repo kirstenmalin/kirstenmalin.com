@@ -1,0 +1,38 @@
+/**
+ * Color scheme
+ * All main colors, -dark, and -darker, as well as primary-light and secondary-light, have >4.5:1 contrast against white.
+ * tertiary-light has >3:1 against white.
+ */
+
+:root {
+  --background: #ffffff;
+  --primary: #4c0fab;
+  --primary-light: #8239f3;
+  --primary-lighter: #bf95ff;
+  --primary-dark: #3b0b86;
+  --primary-darker: #2d0769;
+  --secondary: #1823ae;
+  --secondary-light: #4350f3;
+  --secondary-lighter: #9ba2ff;
+  --secondary-dark: #111a88;
+  --seconadry-darker: #0b126b;
+  --tertiary: #9502a5;
+  --tertiary-light: #df2af2;
+  --tertiary-lighter: #f48cff;
+  --tertiary-dark: #750281;
+  --tertiary-darker: #5c0165;
+  --text: #0a0a0a;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #000f01;
+    --primary: #caaaf7;
+    --text: #f0f0f0;
+  }
+
+  html {
+    color-scheme: dark;
+  }
+}
+
