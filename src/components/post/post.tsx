@@ -5,7 +5,7 @@ import styles from './post.module.css';
 
 export default function Post({ content, date, tags, title }: BlogPost): ReactNode {
   return (
-    <article>
+    <article className={styles.post}>
       <h2 className={styles.postTitle}>{title}</h2>
       <p>{date}</p>
       { content.map((paragraph) => <p>{paragraph}</p>) }
