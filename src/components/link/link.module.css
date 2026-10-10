@@ -1,0 +1,9 @@
+.link {
+  border-radius: 0.125em;
+  color: var(--primary);
+
+  &:focus-visible {
+    outline: solid 2px var(--primary-light);
+    outline-offset: 0.5rem;
+  }
+}
