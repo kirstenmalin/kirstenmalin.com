@@ -1,5 +1,3 @@
-import type { ReactNode } from 'react';
-
 export type Tag =
   'accessibility' |
   'components' |
@@ -9,7 +7,10 @@ export type Tag =
   'react';
 
 export type BlogPost = {
-  content: ReactNode;
+  /**
+   * The post content, where each paragraph is a string in the array
+   */
+  content: string[];
   /**
    * ISO date string yyyy-mm-dd
    */

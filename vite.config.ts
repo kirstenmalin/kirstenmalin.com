@@ -16,6 +16,7 @@ export default defineConfig(({ isSsrBuild }) => ({
   resolve: {
     alias: {
       '#components': path.resolve(import.meta.dirname, './src/components'),
+      '#data': path.resolve(import.meta.dirname, './src/data'),
       '#pages': path.resolve(import.meta.dirname, './src/pages'),
       '#public': path.resolve(import.meta.dirname, './public')
     },
