@@ -3,8 +3,12 @@ export type Tag =
   'components' |
   'design' |
   'job search' |
+  'mvp' |
   'portfolio' |
-  'react';
+  'react' |
+  'react-router' |
+  'ssr'
+  ;
 
 export type BlogPost = {
   /**
