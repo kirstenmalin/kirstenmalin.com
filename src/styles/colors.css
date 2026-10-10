@@ -28,9 +28,14 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-background: #000f01;
-    --color-primary: #caaaf7;
+    --color-background: #00010f;
+    --color-primary: #c8a3ff;
+    --color-primary-light: #9d66f4;
+    --color-primary-lighter: #6f1fef;
+    --color-secondary: #9ba2ff;
+    --color-secondary-lighter: #111a88;
     --color-text: #f0f0f0;
+    --color-text-inverted: #0a0a0a;
   }
 
   html {
