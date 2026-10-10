@@ -1,6 +1,7 @@
 .header {
   display: flex;
   justify-content: space-between;
+  gap: 2rem;
 }
 
 .siteName {
@@ -9,7 +10,16 @@
 	margin: 0;
 }
 
-.navigation ul {
+
+.navigation {
   display: flex;
-  list-style-type: none;
+  align-items: center;
+
+  ul {
+    display: flex;
+    gap: 1rem;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
 }
