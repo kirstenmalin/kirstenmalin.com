@@ -7,7 +7,8 @@ export type Tag =
   'portfolio' |
   'react' |
   'react-router' |
-  'ssr'
+  'ssr' |
+  'user experience'
   ;
 
 export type BlogPost = {

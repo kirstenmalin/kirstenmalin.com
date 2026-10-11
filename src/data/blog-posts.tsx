@@ -8,6 +8,15 @@ const blogPosts: BlogPosts = [
   //   content: [],
   // },
   {
+    date: '2026-10-11',
+    title: 'Form submission results and accessibility',
+    tags: ['accessibility', 'user experience'],
+    content: [
+      'I have been working my way through the web accessibility courses offered by Deque with the goal of getting the IAAP WAS certification. A lot of the content is stuff I already know, but there are a lot of details to learn and cases that I haven\'t considered, so I\'m still learning a lot. One thing I thought was interesting in their course on forms is how to handle validation messaging when submitting the form triggers a page load, such as when using a form\'s POST method rather than AJAX. The guidance was to make the page title reflect the error or success state, such as prepending "Success! Your account has been created." or "There are 3 errors in the form." to the title. The idea is that the first thing a screen reader reads on page load is the page title, so this gives the user immediate feedback, and they don\'t have to go hunting through the page to find out what happened when they submitted the form.',
+      'One of the things I like about these courses is the way that they explain the experience from the point of view of the user in a way that builds empathy and shows why the accessibility functionality is necessary. I have used screen readers for testing my work, but I don\'t use one on a regular basis for my normal computer use. I suppose that this is also a lesson that actually using assistive technology to do my normal tasks would help me build more empathy and understand better where the main pain points are.'
+    ],
+  },
+  {
     date: '2026-10-10',
     title: 'Gotta keep MVP in mind',
     tags: ['mvp', 'portfolio', 'react-router', 'ssr'],
