@@ -11,7 +11,7 @@ export default function Home(): ReactNode {
         I've been a frontend software enginner since 2011, working mostly on B2B SaaS applications.
         I'm currently looking for a job at a Senior or Staff level,
         either remote or in the Salt Lake area.
-        If you know of anything that might fit, feel free to contact me on <Link href="https://www.linkedin.com/in/kirstenmalin">LinkedIn.</Link> You can also take a look at <Link href="/assets/KirstenMalinResume-2026.pdf">my resume.</Link>
+        If you know of anything that might fit, feel free to contact me on <Link href="https://www.linkedin.com/in/kirstenmalin">LinkedIn.</Link> You can also take a look at <Link href="/assets/KirstenMalinResume-2026.pdf">my resume (PDF).</Link>
       </p>
       <Blog />
     </Main>
