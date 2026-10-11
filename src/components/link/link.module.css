@@ -3,7 +3,6 @@
   color: var(--color-primary);
   outline: solid 2px transparent;
   outline-offset: 0.25em;
-  padding: 0.5em;
   text-decoration-color: var(--color-primary-light);
   text-decoration-thickness: 0.125em;
   text-underline-position: under;
@@ -18,4 +17,11 @@
     color: var(--color-text-inverted);
     text-decoration-color: var(--color-text-inverted);
   }
+}
+
+/* Asymmetrical padding centers the text + underline better
+ * compared to centering just the text
+ */
+.padding {
+  padding: 0.4em 0.5em 0.5em;
 }

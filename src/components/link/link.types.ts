@@ -12,4 +12,10 @@ export type LinkProps = {
    * If the value starts with `http`, then it is treated as an external link.
    */
   href: string;
+  /**
+   * Whether the link has padding.
+   * Links in paragraphs should not have padding; other links should.
+   * @default false
+   */
+  hasPadding?: boolean;
 }
