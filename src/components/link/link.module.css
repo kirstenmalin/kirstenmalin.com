@@ -2,7 +2,7 @@
   border-radius: var(--border-radius);
   color: var(--color-primary);
   outline: solid 2px transparent;
-  outline-offset: 0.25em;
+  outline-offset: 0.34em;
   text-decoration-color: var(--color-primary-light);
   text-decoration-thickness: 0.125em;
   text-underline-position: under;
@@ -23,5 +23,6 @@
  * compared to centering just the text
  */
 .padding {
+  outline-offset: 0.15em;
   padding: 0.4em 0.5em 0.5em;
 }
