@@ -9,10 +9,10 @@ export default defineConfig(({ isSsrBuild }) => ({
     copyPublicDir: !isSsrBuild,
   },
   plugins: [
-    react(),
     babel({
       presets: [reactCompilerPreset()]
     }),
+    react(),
     pluginSsrDevFoucFix(),
   ],
   resolve: {
