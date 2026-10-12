@@ -1,6 +1,10 @@
 .post {
   font-size: 1.2rem;
   margin: 0 0 3rem;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
 }
 
 .postTitle {

@@ -1,8 +1,9 @@
 import type { ReactNode } from 'react';
-import Main from '#components/main';
-import styles from './home.module.css';
 import Link from '#components/link';
-import Blog from '#pages/blog';
+import Main from '#components/main';
+import Post from '#components/post';
+import blogPosts from '#data/blog-posts';
+import styles from './home.module.css';
 
 export default function Home(): ReactNode {
   return (
@@ -13,7 +14,7 @@ export default function Home(): ReactNode {
         either remote or in the Salt Lake area.
         If you know of anything that might fit, feel free to contact me on <Link href="https://www.linkedin.com/in/kirstenmalin">LinkedIn.</Link> You can also take a look at <Link href="/assets/KirstenMalinResume-2026.pdf">my resume (PDF).</Link>
       </p>
-      <Blog />
+      { blogPosts.map((post) => <Post key={post.date} {...post} />) }
     </Main>
   );
 }
