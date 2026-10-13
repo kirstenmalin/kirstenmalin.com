@@ -9,7 +9,7 @@
   transition: outline-color ease-in-out 0.2s;
 
   &:focus-visible {
-    outline-color: var(--color-primary-light);
+    outline-color: var(--color-secondary-light);
   }
 
   &[aria-current="page"] {

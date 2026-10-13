@@ -14,10 +14,11 @@ export default function Link({
   href,
   hasPadding = false,
 }: LinkProps): ReactElement {
-  let target, ariaLabel;
+  let ariaLabel, rel, target;
   if (href.slice(0, 4) === 'http') {
-    target = '_blank';
     ariaLabel = `${children}. Opens in a new tab.`;
+    rel = 'noreferrer';
+    target = '_blank';
   }
   return (
     <a
@@ -25,6 +26,7 @@ export default function Link({
       aria-label={ariaLabel}
       className={`${styles.link} ${hasPadding ? styles.padding : ''}`}
       href={href}
+      rel={rel}
       target={target}
     >
       {children}
