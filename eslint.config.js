@@ -7,6 +7,7 @@ import eslintReact from '@eslint-react/eslint-plugin';
 import stylistic from '@stylistic/eslint-plugin';
 import ts from '@typescript-eslint/eslint-plugin';
 import tsParser from '@typescript-eslint/parser';
+import reactCompiler from 'eslint-plugin-react-compiler';
 
 export default defineConfig([
   {
@@ -24,6 +25,7 @@ export default defineConfig([
     },
     plugins: {
       '@eslint-react': eslintReact,
+      'react-compiler': reactCompiler,
       '@typescript-eslint': ts,
       '@stylistic': stylistic,
     },
