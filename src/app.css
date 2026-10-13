@@ -10,6 +10,7 @@ body {
   background-color: var(--color-background);
   box-sizing: border-box;
   font-family: AtkinsonHyperlegibleNext, Tahoma, Verdana, sans-serif;
+  font-size: 1.2rem;
   margin: 0;
   min-height: 100svh;
   padding: 1rem;
@@ -22,7 +23,6 @@ body {
     padding: 2rem 4rem 4rem;
   }
 }
-
 
 h1,
 h2,
