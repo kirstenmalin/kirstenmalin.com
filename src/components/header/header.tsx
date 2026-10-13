@@ -9,7 +9,7 @@ export default function Header({ path }: HeaderProps): ReactNode {
   return (
     <header className={styles.header}>
       <span className={styles.nameLogoWrapper}>
-        <img className={styles.logo} src="/assets/eclipse.jpg" alt="Digital painting of an eclipse." />
+        <img className={styles.logo} src="/images/eclipse.jpg" alt="Digital painting of an eclipse." />
         <NameWrapper className={styles.nameWrapper}>
           <span className={styles.siteName}>Kirsten Malin</span>
           <span className={styles.tagline}>Frontend Software Engineer</span>

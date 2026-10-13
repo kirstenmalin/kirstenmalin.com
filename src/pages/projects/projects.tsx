@@ -35,7 +35,7 @@ export default function Projects(): ReactElement {
               See the <Link href="https://fabric.bamboohr.net">Storybook documentation with examples</Link>
             </p>
           </>}
-          image="/assets/fabric-intro-screenshot.png"
+          image="/images/fabric-intro-screenshot.png"
           imageAlt="The Fabric component library documentation intro page."
           link="https://fabric.bamboohr.net"
           title="BambooHR's component library"
@@ -64,7 +64,7 @@ export default function Projects(): ReactElement {
               </p>
             </>
           )}
-          image="/assets/ukulele-app-screenshot.png"
+          image="/images/ukulele-app-screenshot.png"
           imageAlt="Ukulele chords and fret diagrams for the Beatle's song Let It Be"
           link="/projects/ukulele"
           title="Ukulele Chords app"
