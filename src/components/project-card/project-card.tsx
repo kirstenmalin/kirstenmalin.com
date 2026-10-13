@@ -14,7 +14,6 @@ export default function ProjectCard ({
 
   return (
     <article aria-labelledby={id} className={styles.projectCard}>
-      <img alt={imageAlt} className={styles.image} src={image} />
       <h2 className={styles.title} id={id}>
         { link
           ? <Link href={link}>
@@ -23,6 +22,7 @@ export default function ProjectCard ({
           : title
         }
       </h2>
+      <img alt={imageAlt} className={styles.image} src={image} />
       <div className={styles.description}>{description}</div>
     </article>
   );

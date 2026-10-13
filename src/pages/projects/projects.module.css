@@ -1,5 +1,10 @@
 .projectList {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
   gap: 2em;
+  grid-template-columns: 1fr;
+  margin-top: 3rem;
+
+  @media (width >= 960px) {
+    grid-template-columns: 1fr 1fr;
+  }
 }
