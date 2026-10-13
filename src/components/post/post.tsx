@@ -11,7 +11,7 @@ export default function Post({ content, date, tags, title }: BlogPost): ReactNod
     <article aria-labelledby={postId} className={styles.post}>
       <h2 className={styles.postTitle} id={postId}>{title}</h2>
       <time dateTime={date}>{date}</time>
-      { content.map((paragraph) => <p key={paragraph.slice(0,10)}>{paragraph}</p>) }
+      { content.map((paragraph) => <p key={paragraph?.toString().slice(0,10)}>{paragraph}</p>) }
       <PostTags tags={tags} />
     </article>
   );

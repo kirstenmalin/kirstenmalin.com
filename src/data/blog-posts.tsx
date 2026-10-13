@@ -1,3 +1,4 @@
+import Link from '#components/link';
 import type { BlogPosts } from './blog-posts.types';
 
 const blogPosts: BlogPosts = [
@@ -7,6 +8,16 @@ const blogPosts: BlogPosts = [
   //   tags: [],
   //   content: [],
   // },
+  {
+    date: '2026-10-12',
+    title: 'Phone numbers and shifting focus',
+    tags: ['accessibility', 'user experience'],
+    content: [
+      'When filling out forms online (buying stuff, paying bills, etc.), I frequently need to fill out my phone number. Usually, the phone number field is one input, but a sigificant minority of the time, it\'s three separate fields. A common, but not consistent, pattern I run across in these situations is for the form to automatically move the focus to the next field when I\'ve finished the current field. This annoys me because it\'s unexpected and not consistent across websites.',
+      'I felt vindicated when I was going through Deque\'s course on Form Labels, Instructions, and Validation and ran across a "bad example" of shifting focus based on user input in a text field that was exactly this case: a three-input phone number. This corresponds to WCAG criterion 3.2.2 On Input, which states, "Changing the setting of any user interface component does not automatically cause a change of context unless the user has been advised of the behavior before using the component."',
+      <>For more information, see <Link href="https://www.w3.org/WAI/WCAG22/Understanding/on-input.html">Understanding SC 3.2.1 On Focus</Link></>,
+    ],
+  },
   {
     date: '2026-10-11',
     title: 'Form submission results and accessibility',
