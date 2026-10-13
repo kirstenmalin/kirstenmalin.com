@@ -27,7 +27,7 @@ const templateHtml = isProduction
 const app = express();
 
 /** @type {import('vite').ViteDevServer | undefined} */
-let vite;
+let vite, ukuleleRouter;
 if (!isProduction) {
   const { createServer } = await import('vite');
   vite = await createServer({
@@ -36,12 +36,16 @@ if (!isProduction) {
     base,
   });
   app.use(vite.middlewares);
+  ukuleleRouter = (await import('./ukulele/server/router.js')).default;
 } else {
   const compression = (await import('compression')).default;
   const sirv = (await import('sirv')).default;
   app.use(compression());
   app.use(base, sirv(path.join(import.meta.dirname, '/dist/client'), { extensions: [] }));
+  ukuleleRouter = (await import(path.join(import.meta.dirname, '/ukulele/server/router.js'))).default;
 }
+
+app.use('/projects/ukulele', ukuleleRouter);
 
 app.use('*all', async (req, res) => {
   try {

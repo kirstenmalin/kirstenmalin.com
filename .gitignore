@@ -27,3 +27,6 @@ dist-ssr
 /plan.txt
 *.cert
 *.key
+
+# Ignore project symlinks
+ukulele
