@@ -16,6 +16,7 @@
 }
 
 .logo {
+  border-radius: var(--border-radius);
   max-height: 5rem;
 }
 

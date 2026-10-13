@@ -11,7 +11,7 @@ export const SKIP_LINK_TARGET_ID = 'main';
 export default function SkipLink(): ReactElement {
   return (
     <div className={styles.skipLink}>
-      <Link href={`#${SKIP_LINK_TARGET_ID}`}>
+      <Link hasPadding={true} href={`#${SKIP_LINK_TARGET_ID}`}>
         Skip to main content
       </Link>
     </div>
