@@ -3,7 +3,7 @@
   border-radius: 0.125rem;
   margin: 0 auto;
   max-width: var(--max-page-width);
-  outline: solid 2px transparent;
+  outline: solid 3px transparent;
   outline-offset: 0.5rem;
   padding: 3rem 0;
   transition: outline-color ease-in-out 0.2s;

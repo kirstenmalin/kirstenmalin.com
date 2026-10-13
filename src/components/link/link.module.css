@@ -1,7 +1,7 @@
 .link {
   border-radius: var(--border-radius);
   color: var(--color-primary);
-  outline: solid 2px transparent;
+  outline: solid 3px transparent;
   outline-offset: 0.34em;
   text-decoration-color: var(--color-primary-light);
   text-decoration-thickness: 0.125em;
