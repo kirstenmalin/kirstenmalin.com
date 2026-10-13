@@ -1,0 +1,19 @@
+.projectCard {
+  border: solid 1px var(--color-primary-lighter);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow-primary-small);
+  min-width: 300px;
+}
+
+.image {
+
+}
+
+.title {
+
+}
+
+.description {
+
+}
+
