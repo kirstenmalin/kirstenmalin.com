@@ -45,7 +45,6 @@
   align-items: center;
   display: flex;
   font-size: 1.25rem;
-  justify-content: flex-end;
 
   ul {
     display: flex;
