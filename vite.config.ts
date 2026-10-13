@@ -1,6 +1,5 @@
 import { defineConfig } from 'vite';
-import react, { reactCompilerPreset } from '@vitejs/plugin-react';
-import babel from '@rolldown/plugin-babel';
+import react from '@vitejs/plugin-react';
 import path from 'node:path';
 import { pluginSsrDevFoucFix } from './ssr-dev-fouc-fix.ts';
 
@@ -9,10 +8,7 @@ export default defineConfig(({ isSsrBuild }) => ({
     copyPublicDir: !isSsrBuild,
   },
   plugins: [
-    babel({
-      presets: [reactCompilerPreset()]
-    }),
-    react(),
+    react({ compiler: true }),
     pluginSsrDevFoucFix(),
   ],
   resolve: {
