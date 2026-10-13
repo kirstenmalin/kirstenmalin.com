@@ -4,17 +4,17 @@ import type { HeaderProps } from './header.types';
 import styles from './header.module.css';
 
 export default function Header({ path }: HeaderProps): ReactNode {
-  const NameLogoWrapper = path === '' ? 'h1' : 'div';
+  const NameWrapper = path === '' ? 'h1' : 'div';
 
   return (
     <header className={styles.header}>
-      <NameLogoWrapper className={styles.nameLogoWrapper}>
+      <span className={styles.nameLogoWrapper}>
         <img className={styles.logo} src="/assets/eclipse.jpg" alt="Digital painting of an eclipse." />
-        <span className={styles.nameWrapper}>
+        <NameWrapper className={styles.nameWrapper}>
           <span className={styles.siteName}>Kirsten Malin</span>
           <span className={styles.tagline}>Frontend Software Engineer</span>
-        </span>
-      </NameLogoWrapper>
+        </NameWrapper>
+      </span>
       <nav className={styles.navigation}>
         <ul>
           <li><Link ariaCurrent={path === '' ? 'page' : undefined} hasPadding={true} href="/">Home</Link></li>
