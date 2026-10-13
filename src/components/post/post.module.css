@@ -2,7 +2,7 @@
   margin: 0 0 3rem;
 
   &:last-of-type {
-    margin-bottom: 0;
+    margin-block-end: 0;
   }
 }
 
