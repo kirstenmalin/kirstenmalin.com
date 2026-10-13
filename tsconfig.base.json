@@ -21,7 +21,8 @@
       "#components/*": ["./src/components/*"],
       "#data/*": ["./src/data/*"],
       "#pages/*": ["./src/pages/*"],
-      "#public/*": ["./public/*"]
+      "#public/*": ["./public/*"],
+      "#utils/*": ["./src/utils/*"]
     }
   }
 }

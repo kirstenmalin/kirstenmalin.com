@@ -1,10 +1,11 @@
 import type { ReactNode } from 'react';
 import PostTags from '#components/post-tags';
 import type { BlogPost } from '#data/blog-posts.types';
+import toKebabCase from '#utils/to-kebab-case';
 import styles from './post.module.css';
 
 export default function Post({ content, date, tags, title }: BlogPost): ReactNode {
-  const postId = title.toLowerCase().split(' ').join('-');
+  const postId = toKebabCase(title);
 
   return (
     <article aria-labelledby={postId} className={styles.post}>
