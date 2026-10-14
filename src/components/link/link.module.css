@@ -17,6 +17,14 @@
     color: var(--color-text-inverted);
     text-decoration-color: var(--color-text-inverted);
   }
+
+  & > svg {
+    display: inline-block;
+    fill: currentColor;
+    height: 0.75em;
+    margin-inline-start: 0.2em;
+    width: 0.75em;
+  }
 }
 
 /* Asymmetrical padding centers the text + underline better

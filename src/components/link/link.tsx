@@ -1,4 +1,5 @@
 import type { ReactElement } from 'react';
+import ExternalLinkIcon from './external-link-icon';
 import type { LinkProps } from './link.types';
 import styles from './link.module.css';
 
@@ -30,6 +31,7 @@ export default function Link({
       target={target}
     >
       {children}
+      {ariaLabel && <ExternalLinkIcon />}
     </a>
   );
 }
