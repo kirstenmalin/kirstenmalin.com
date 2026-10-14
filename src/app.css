@@ -9,6 +9,8 @@ html {
 body {
   background-color: var(--color-background);
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
   font-family: AtkinsonHyperlegibleNext, Tahoma, Verdana, sans-serif;
   margin: 0;
   min-height: 100svh;
@@ -21,6 +23,13 @@ body {
   @media (width >= 960px) {
     padding: 2rem 4rem 3rem;
   }
+}
+
+#root {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 h1,

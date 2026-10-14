@@ -1,6 +1,7 @@
 .main {
   border-block-end: solid 3px var(--color-secondary-light);
   border-radius: 0.125rem;
+  flex-grow: 1;
   margin: 0 auto;
   max-width: var(--max-page-width);
   outline: solid 3px transparent;
