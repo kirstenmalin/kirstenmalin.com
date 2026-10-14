@@ -1,5 +1,5 @@
 .main {
-  border-block-end: solid 3px var(--color-secondary-light);
+  border-block-end: var(--border-page-bookends);
   border-radius: 0.125rem;
   flex-grow: 1;
   margin: 0 auto;

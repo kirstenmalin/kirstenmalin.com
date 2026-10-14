@@ -1,5 +1,5 @@
 .intro {
-  border-block-end: solid 3px var(--color-secondary-light);
+  border-block-end: var(--border-divider);
   margin: 0 0 4rem;
   padding: 0 0 4rem;
 }

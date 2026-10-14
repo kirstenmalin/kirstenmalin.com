@@ -8,7 +8,7 @@ export default function Blog(): ReactNode {
   return (
     <Main>
       <H1>Blog</H1>
-      { blogPosts.map((post) => <Post key={post.date} {...post} />) }
+      { blogPosts.map((post) => <Post key={post.date} hasDivider={true} {...post} />) }
     </Main>
   );
 }

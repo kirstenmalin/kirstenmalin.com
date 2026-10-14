@@ -1,4 +1,6 @@
 :root {
+  --border-divider: solid 4px var(--color-secondary-light);
+  --border-page-bookends: solid 8px var(--color-secondary-light);
   --border-radius: 0.3em;
   --box-shadow-primary: 2px 2px 5px 3px var(--color-primary-lighter, black);
   --box-shadow-primary-small: 1px 1px 0 0 var(--color-primary-lighter, black);

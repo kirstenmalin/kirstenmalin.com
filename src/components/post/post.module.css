@@ -6,6 +6,11 @@
   }
 }
 
+.divider:not(:last-of-type) {
+  border-block-end: var(--border-divider);
+  padding-block-end: 3rem;
+}
+
 .postTitle {
   font-size: 2em;
   margin-block-end: 1rem;
