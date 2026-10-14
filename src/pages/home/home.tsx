@@ -2,8 +2,6 @@ import type { ReactNode } from 'react';
 import H2 from '#components/h2';
 import Link from '#components/link';
 import Main from '#components/main';
-import Post from '#components/post';
-import blogPosts from '#data/blog-posts';
 import styles from './home.module.css';
 
 export default function Home(): ReactNode {
