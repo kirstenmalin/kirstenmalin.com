@@ -57,6 +57,13 @@ export default function Projects(): ReactElement {
                 functions I wrote to surface errors and other messages in the UI.
               </p>
               <p>
+                I also wanted to avoid any build or compliation step so that I could make a change
+                and immediately get back to playing, which is why I opted for statically serving
+                plain HTML files and accepting the duplication across song files. With the
+                improvement in build tools since I started this project, I may go back and refactor
+                things to make it more DRY.
+              </p>
+              <p>
                 See the <Link href="./ukulele">Ukulele Chords app</Link> in action!
               </p>
               <p>
