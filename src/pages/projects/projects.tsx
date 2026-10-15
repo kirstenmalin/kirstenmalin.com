@@ -32,7 +32,13 @@ export default function Projects(): ReactElement {
               addressing problems in a centralized location as much as possible.
             </p>
             <p>
-              See the <Link href="https://fabric.bamboohr.net">Storybook documentation with examples</Link>
+              Some of the Fabric components I had a particularly large role in creating are
+              the <Link href="https://fabric.bamboohr.net/?path=/docs/components-cropper--guide">Cropper</Link>,
+              the <Link href="https://fabric.bamboohr.net/?path=/docs/components-photouploadmodal--guide">PhotoUploadModal</Link>,
+              and the <Link href="https://fabric.bamboohr.net/?path=/docs/components-globaltemplate--guide">GlobalTemplate</Link>.
+            </p>
+            <p>
+              See the <Link href="https://fabric.bamboohr.net">Fabric Storybook documentation</Link>
             </p>
           </>}
           image="/images/fabric-intro-screenshot.png"
