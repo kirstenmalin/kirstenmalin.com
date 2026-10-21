@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react';
-import H2 from '#components/h2';
+import SectionHeading from '#components/section-heading';
 import PostTags from '#components/post-tags';
 import toKebabCase from '#utils/to-kebab-case';
 import type { PostProps } from './post.types';
@@ -10,7 +10,7 @@ export default function Post({ content, date, hasDivider, tags, title }: PostPro
 
   return (
     <article aria-labelledby={postId} className={`${styles.post} ${hasDivider ? styles.divider : ''}`}>
-      <H2 id={postId}>{title}</ H2>
+      <SectionHeading id={postId}>{title}</ SectionHeading>
       <time dateTime={date}>{date}</time>
       { content.map((paragraph) => <p key={paragraph?.toString().slice(0,10)}>{paragraph}</p>) }
       <PostTags tags={tags} />

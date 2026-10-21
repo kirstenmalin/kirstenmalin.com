@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react';
-import H2 from '#components/h2';
+import SectionHeading from '#components/section-heading';
 import Link from '#components/link';
 import Main from '#components/main';
 import styles from './home.module.css';
@@ -14,7 +14,7 @@ export default function Home(): ReactNode {
         on <Link href="https://www.linkedin.com/in/kirstenmalin">LinkedIn</Link>. You can also take
         a look at <Link href="/files/KirstenMalinResume-2026.pdf">my resume (PDF)</Link>.
       </p>
-      <H2>About Me</H2>
+      <SectionHeading>About Me</SectionHeading>
       <p>
         I originally got into web development as a hobby.
         I tried out a WYSIWYG editor to make a personal website, but I couldn't get it to do exactly

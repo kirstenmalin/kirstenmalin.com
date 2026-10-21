@@ -1,4 +1,4 @@
-export type H2Props = {
+export type SectionHeadingProps = {
   /**
    * The heading text
    */
