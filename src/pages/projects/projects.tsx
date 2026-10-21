@@ -1,5 +1,5 @@
 import type { ReactElement } from 'react';
-import H1 from '#components/h1';
+import PageHeading from '#components/page-heading';
 import Link from '#components/link';
 import Main from '#components/main';
 import ProjectCard from '#components/project-card';
@@ -8,7 +8,7 @@ import styles from './projects.module.css';
 export default function Projects(): ReactElement {
   return (
     <Main>
-      <H1>Projects</H1>
+      <PageHeading>Projects</PageHeading>
       <p>
         These are projects I have worked on, both personally and professionally.
         Most of my professional work is behind a paywall because I've been working at
