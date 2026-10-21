@@ -3,7 +3,9 @@ import type { ReactNode } from 'react';
 export type Tag =
   'accessibility' |
   'components' |
+  'component libraries' |
   'design' |
+  'design systems' |
   'job search' |
   'mvp' |
   'portfolio' |
