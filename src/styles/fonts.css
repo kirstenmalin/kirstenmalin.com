@@ -4,3 +4,11 @@
   font-style: normal;
   font-weight: normal;
 }
+
+@font-face {
+  font-family: AtkinsonHyperlegibleMono;
+  src: url('/fonts/AtkinsonHyperlegibleMono-Regular.woff2');
+  font-style: normal;
+  font-weight: normal;
+}
+
