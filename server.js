@@ -6,6 +6,8 @@ import https from 'node:https';
 import os from 'node:os';
 import path from 'node:path';
 
+process.loadEnvFile(path.join(import.meta.dirname, './.env'));
+
 const isProduction = process.env.NODE_ENV === 'production';
 const port = process.env.PORT || 26675;
 const base = process.env.BASE || '/';
@@ -27,7 +29,7 @@ const templateHtml = isProduction
 const app = express();
 
 /** @type {import('vite').ViteDevServer | undefined} */
-let vite, ukuleleRouter;
+let vite, ukuleleRouter, blogMiddleware;
 if (!isProduction) {
   const { createServer } = await import('vite');
   vite = await createServer({
@@ -37,19 +39,18 @@ if (!isProduction) {
   });
   app.use(vite.middlewares);
   ukuleleRouter = (await import('./ukulele/server/router.js')).default;
+  blogMiddleware = (await vite.ssrLoadModule('/src/server/blog-middleware.ts')).default;
 } else {
   const compression = (await import('compression')).default;
   const sirv = (await import('sirv')).default;
   app.use(compression());
   app.use(base, sirv(path.join(import.meta.dirname, '/dist/client'), { extensions: [] }));
   ukuleleRouter = (await import(path.join(import.meta.dirname, '/ukulele/server/router.js'))).default;
+  blogMiddleware = (await import(path.join(import.meta.dirname, '/dist/server/blog-middleware.ts'))).default;
 }
 
 app.use('/projects/ukulele', ukuleleRouter);
-app.use('/blog', (req, _res, next) => {
-  req.pageTitle = 'Blog | ';
-  next();
-});
+app.use('/blog', blogMiddleware);
 app.use('/projects', (req, _res, next) => {
   req.pageTitle = 'Projects | ';
   next();

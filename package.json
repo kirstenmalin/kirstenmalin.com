@@ -13,6 +13,7 @@
     "test": "vitest"
   },
   "dependencies": {
+    "@mysql/xdevapi": "8.0.35",
     "compression": "1.8.2",
     "express": "5.2.1",
     "react": "19.2.8",

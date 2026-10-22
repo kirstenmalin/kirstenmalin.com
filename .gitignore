@@ -27,6 +27,7 @@ dist-ssr
 /plan.txt
 *.cert
 *.key
+*.env
 *.pdf
 
 # Ignore project symlinks
