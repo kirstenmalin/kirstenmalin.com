@@ -8,13 +8,13 @@ export default function Header({ path }: HeaderProps): ReactNode {
 
   return (
     <header className={styles.header}>
-      <span className={styles.nameLogoWrapper}>
+      <a className={styles.nameLogoWrapper} href="/">
         <img className={styles.logo} src="/images/eclipse.jpg" alt="Digital painting of an eclipse." />
         <NameWrapper className={styles.nameWrapper}>
           <span className={styles.siteName}>Kirsten Malin</span>
           <span className={styles.tagline}>Frontend Software Engineer</span>
         </NameWrapper>
-      </span>
+      </a>
       <nav className={styles.navigation}>
         <ul>
           <li><Link ariaCurrent={path === '' ? 'page' : undefined} hasPadding={true} href="/">Home</Link></li>

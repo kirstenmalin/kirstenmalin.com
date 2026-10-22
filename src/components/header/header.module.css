@@ -22,8 +22,16 @@
 
 .nameLogoWrapper {
   align-items: center;
+  border-radius: var(--border-radius);
   display: flex;
   gap: 1rem;
+  outline: solid 3px transparent;
+  outline-offset: 0.34em;
+  text-decoration: none;
+
+  &:focus-visible {
+    outline-color: var(--color-secondary-light);
+  }
 }
 
 .nameWrapper {
