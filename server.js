@@ -46,6 +46,14 @@ if (!isProduction) {
 }
 
 app.use('/projects/ukulele', ukuleleRouter);
+app.use('/blog', (req, _res, next) => {
+  req.pageTitle = 'Blog | ';
+  next();
+});
+app.use('/projects', (req, _res, next) => {
+  req.pageTitle = 'Projects | ';
+  next();
+});
 
 app.use('*all', async (req, res) => {
   try {
@@ -68,7 +76,7 @@ app.use('*all', async (req, res) => {
     const rendered = render(url);
 
     const html = template
-      .replace('<!--app-head-->', rendered.head ?? '')
+      .replace('<!--app-title-->', `${(req.pageTitle ?? '')}Kirsten Malin, Frontend Software Engineer`)
       .replace('<!--app-html-->', rendered.html ?? '');
 
     res.status(200).set({ 'Content-Type': 'text/html' }).send(html);

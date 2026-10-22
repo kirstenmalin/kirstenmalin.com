@@ -8,5 +8,6 @@
     /* Bundler mode */
     "jsx": "react-jsx"
   },
-  "include": ["src"]
+  "include": ["src"],
+  "exclude": ["src/server"]
 }
