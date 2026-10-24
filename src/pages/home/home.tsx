@@ -12,7 +12,7 @@ export default function Home(): ReactNode {
         I'm currently looking for a job at a Senior or Staff level, either remote or in the
         Salt Lake area. If you know of anything that might fit, feel free to contact me
         on <Link href="https://www.linkedin.com/in/kirstenmalin">LinkedIn</Link>. You can also take
-        a look at <Link href="/files/KirstenMalinResume-2026.pdf">my resume (PDF)</Link>.
+        a look at <Link href="/files/KirstenMalinResume-2026.pdf">my resum&eacute;</Link>.
       </p>
       <SectionHeading>About Me</SectionHeading>
       <p>
