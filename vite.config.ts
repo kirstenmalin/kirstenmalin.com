@@ -6,6 +6,7 @@ import { pluginSsrDevFoucFix } from './ssr-dev-fouc-fix.ts';
 export default defineConfig(({ isSsrBuild }) => ({
   build: {
     copyPublicDir: !isSsrBuild,
+    cssCodeSplit: true,
   },
   plugins: [
     react({ compiler: true }),
