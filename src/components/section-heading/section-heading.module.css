@@ -1,5 +1,7 @@
 .sectionHeading {
+  color: var(--color-primary);
   font-size: 2rem;
+  font-weight: bold;
   line-height: 1.1;
   margin: 0 0 1rem;
 }

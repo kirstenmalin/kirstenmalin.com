@@ -1,5 +1,6 @@
 import Code from '#components/code';
 import Link from '#components/link';
+import SubHeading from '#components/sub-heading';
 import type { BlogPosts } from './blog-posts.types';
 
 const blogPosts: BlogPosts = [
@@ -22,10 +23,10 @@ const blogPosts: BlogPosts = [
           process of planning one out. Through all of this, I've learned some things and come to
           some conclusions about component libraries in general.
         </p>
-        <p>
+        <SubHeading>
           1. Every website should have some sort of design system, and every website of more than
           trivial scale should have a component library.
-        </p>
+        </SubHeading>
         <p>
           A sufficiently small site could get away with some shared CSS classes to make styling
           consistent. Anything bigger needs a set of shared components. Visual consistency across
@@ -36,9 +37,9 @@ const blogPosts: BlogPosts = [
           helps to streamline site-wide design changes. Would you rather change the color scheme in
           one file and have it apply everywhere or go track down every style rule that sets a color?
         </p>
-        <p>
+        <SubHeading>
           2. If you're just starting to create a component library, start small but high-impact.
-        </p>
+        </SubHeading>
         <p>
           One button component that's shared across your site is still a benefit. It's not as
           useful to create an "entire" set of shared components before starting to use any of them.
@@ -52,10 +53,10 @@ const blogPosts: BlogPosts = [
           incorporate those learnings into the plans for other form components than it is to have
           to overhaul your whole set of form components after the fact.
         </p>
-        <p>
+        <SubHeading>
           3. If there is no existing nor anticipated use case for a proposed component, don't
           make it.
-        </p>
+        </SubHeading>
         <p>
           An unused component is a waste of time (and therefore money) in terms of both creating it
           and maintaining it. Maintenance costs are non-zero, especially if the component uses any
@@ -63,9 +64,9 @@ const blogPosts: BlogPosts = [
           preprocessor or your date library or Storybook, will that component need any changes? At
           a minimum, someone will need to take the time to answer that question.
         </p>
-        <p>
+        <SubHeading>
           4. Be judicious in your use of third-party component libraries.
-        </p>
+        </SubHeading>
         <p>
           Using something like <Link href="https://mui.com">MUI</Link> can really speed up your
           work, but it can also introduce a lot of problems. Unfortunately, my experience falls
@@ -85,9 +86,9 @@ const blogPosts: BlogPosts = [
           enjoy it, either. I'm not saying that you shouldn't use a third-party library, but do
           your research to decide how much it will benefit you compared to the maintenance cost.
         </p>
-        <p>
+        <SubHeading>
           5. Make your components flexible, but not too flexible.
-        </p>
+        </SubHeading>
         <p>
           This one requires some collaboration with Design and Product, and it can be tricky to get
           right. Minimizing the options or variants for a component helps with UI and UX
@@ -107,9 +108,9 @@ const blogPosts: BlogPosts = [
           here, I'd err on the side of being more restrictive in code because it's a lot easier to
           dd new capabilities after the fact than to lock things down and add restrictions later.
         </p>
-        <p>
+        <SubHeading>
           6. Build as much accessibility into the component library as you can.
-        </p>
+        </SubHeading>
         <p>
           Make input labels part of the input components so that the library can handle associating
           them correctly. Manage keyboard focus when dialogs and modals open and close. Make sure
