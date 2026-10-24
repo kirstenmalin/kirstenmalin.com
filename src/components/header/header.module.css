@@ -37,6 +37,7 @@
 .nameWrapper {
   display: inline-flex;
   flex-direction: column;
+  font-weight: bold;
 }
 
 .siteName {
