@@ -10,9 +10,9 @@ export default function Post({ content, date, hasDivider, tags, title }: PostPro
 
   return (
     <article aria-labelledby={postId} className={`${styles.post} ${hasDivider ? styles.divider : ''}`}>
-      <SectionHeading id={postId}>{title}</ SectionHeading>
+      <SectionHeading id={postId}>{title}</SectionHeading>
       <time dateTime={date}>{date}</time>
-      { content.map((paragraph) => <p key={paragraph?.toString().slice(0,10)}>{paragraph}</p>) }
+      { content }
       <PostTags tags={tags} />
     </article>
   );

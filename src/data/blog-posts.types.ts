@@ -19,7 +19,7 @@ export type BlogPost = {
   /**
    * The post content, where each paragraph is a string in the array
    */
-  content: ReactNode[];
+  content: ReactNode;
   /**
    * ISO date string yyyy-mm-dd
    */
