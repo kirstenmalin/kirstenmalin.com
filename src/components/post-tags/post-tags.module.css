@@ -4,7 +4,8 @@
 }
 
 .postTag {
-  background-color: var(--color-primary-lighter);
+  background-color: var(--color-secondary-low);
+  border: solid 1px var(--color-secondary-med);
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow-secondary-small);
   display: inline-block;

@@ -3,13 +3,13 @@
   color: var(--color-primary);
   outline: solid 3px transparent;
   outline-offset: 0.34em;
-  text-decoration-color: var(--color-primary-light);
+  text-decoration-color: var(--color-primary-med);
   text-decoration-thickness: 0.125em;
   text-underline-position: under;
   transition: outline-color ease-in-out 0.2s;
 
   &:focus-visible {
-    outline-color: var(--color-secondary-light);
+    outline-color: var(--color-secondary-med);
   }
 
   &[aria-current="page"] {
@@ -25,10 +25,6 @@
     height: 1em;
     margin-inline-start: 0.2em;
     vertical-align: top;
-  }
-
-  & .externalLinkIcon {
-    height: 0.75em;
   }
 }
 

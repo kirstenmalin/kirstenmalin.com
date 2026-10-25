@@ -24,11 +24,12 @@ dist-ssr
 *.sln
 *.sw?
 
-/plan.txt
+plan/
 *.cert
 *.key
 *.env
 *.pdf
+
 
 # Ignore project symlinks
 ukulele

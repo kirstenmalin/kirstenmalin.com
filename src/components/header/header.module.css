@@ -22,6 +22,7 @@
 
 .nameLogoWrapper {
   align-items: center;
+  align-self: flex-start;
   border-radius: var(--border-radius);
   display: flex;
   gap: 1rem;
@@ -30,13 +31,14 @@
   text-decoration: none;
 
   &:focus-visible {
-    outline-color: var(--color-secondary-light);
+    outline-color: var(--color-secondary-med);
   }
 }
 
 .nameWrapper {
   display: inline-flex;
   flex-direction: column;
+  font-weight: bold;
 }
 
 .siteName {
