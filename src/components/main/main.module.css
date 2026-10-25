@@ -10,6 +10,6 @@
   transition: outline-color ease-in-out 0.2s;
 
   &:focus-visible {
-    outline-color: var(--color-secondary-light);
+    outline-color: var(--color-secondary-med);
   }
 }

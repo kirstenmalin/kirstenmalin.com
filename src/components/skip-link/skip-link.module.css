@@ -1,7 +1,7 @@
 .skipLink {
   background-color: var(--color-background);
   border-radius: var(--border-radius);
-  box-shadow: var(--box-shadow-primary);
+  box-shadow: var(--box-shadow-primary-large);
   font-size: 1.2em;
   inset-inline-start: 2em;
   padding: 1em;

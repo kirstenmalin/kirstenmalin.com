@@ -1,8 +1,12 @@
 .code {
-  background-color: var(--color-gray-lighter);
-  border: 1px solid var(--color-gray-light);
+  background-color: var(--color-gray-low);
+  border: 1px solid var(--color-gray-med);
   border-radius: var(--border-radius);
   font-family: AtkinsonHyperlegibleMono, monospace;
   padding: 0.125em 0.5em;
   white-space: pre;
+
+  span& {
+    margin: 0 0.125em;
+  }
 }

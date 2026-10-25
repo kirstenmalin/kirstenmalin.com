@@ -31,7 +31,7 @@
   text-decoration: none;
 
   &:focus-visible {
-    outline-color: var(--color-secondary-light);
+    outline-color: var(--color-secondary-med);
   }
 }
 

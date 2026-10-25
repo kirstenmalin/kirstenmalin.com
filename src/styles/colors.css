@@ -1,43 +1,42 @@
 /**
  * Color scheme
- * All main colors, -dark, and -darker, as well as primary-light and secondary-light, have >4.5:1 contrast against white.
- * tertiary-light has >3:1 against white.
- * All -lighter colors have >4.5:1 against black.
+ * -med and -low refer to contrast against the --color-background value
+ * All main colors, primary-med, and secondary-med
+ * have >4.5:1 contrast against the background color.
+ * tertiary-med has >3:1 against the background color.
+ * All -low colors have >4.5:1 against the text color.
  */
 
 :root {
   --color-background: #ffffff;
-  --color-primary: #4c0fab;
-  --color-primary-light: #8239f3;
-  --color-primary-lighter: #e7d6ff;
-  --color-primary-dark: #3b0b86;
-  --color-primary-darker: #2d0769;
-  --color-secondary: #1823ae;
-  --color-secondary-light: #4350f3;
-  --color-secondary-lighter: #9ba2ff;
-  --color-secondary-dark: #111a88;
-  --color-secondary-darker: #0b126b;
-  --color-tertiary: #9502a5;
-  --color-tertiary-light: #df2af2;
-  --color-tertiary-lighter: #f48cff;
-  --color-tertiary-dark: #750281;
-  --color-tertiary-darker: #5c0165;
-  --color-gray-lighter: #f3f3f3;
-  --color-gray-light: #888;
+  --color-gray-med: #888;
+  --color-gray-low: #f3f3f3;
   --color-text: #0a0a0a;
   --color-text-inverted: #fff;
+  --color-primary: #4c0fab;
+  --color-primary-med: #8249ff;
+  --color-primary-low: #e3d6ff;
+  --color-secondary: #005a8f;
+  --color-secondary-med: #0071b3;
+  --color-secondary-low: #d5ecff;
+  --color-tertiary: #00523f;
+  --color-tertiary-med: #569982;
+  --color-tertiary-low: #94d8c0;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-background: #00010f;
-    --color-primary: #c8a3ff;
-    --color-primary-light: #9d66f4;
-    --color-primary-lighter: #6f1fef;
-    --color-secondary: #9ba2ff;
-    --color-secondary-lighter: #111a88;
+    --color-background: #000211;
+    --color-gray-med: #777;
+    --color-gray-low: #333333;
     --color-text: #f0f0f0;
     --color-text-inverted: #0a0a0a;
+    --color-primary: #b79dff;
+    --color-primary-med: #976afd;
+    --color-primary-low: #3b0b86;
+    --color-secondary: #9ad3f5;
+    --color-secondary-med: #509ac9;
+    --color-secondary-low: #005a8f;
   }
 
   html {

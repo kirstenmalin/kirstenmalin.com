@@ -1,4 +1,5 @@
 .subHeading {
+  color: var(--color-secondary);
   font-size: 1.2rem;
   font-weight: bold;
   line-height: 1.1;
