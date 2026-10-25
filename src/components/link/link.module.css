@@ -26,10 +26,6 @@
     margin-inline-start: 0.2em;
     vertical-align: top;
   }
-
-  & .externalLinkIcon {
-    height: 0.75em;
-  }
 }
 
 /* Asymmetrical padding centers the text + underline better

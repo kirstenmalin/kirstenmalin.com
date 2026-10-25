@@ -35,7 +35,7 @@ export default function Link({
       target={target}
     >
       {children}
-      {rel && <ExternalLinkIcon className={styles.externalLinkIcon} />}
+      {rel && <ExternalLinkIcon />}
       {isPdf && <PdfIcon />}
     </a>
   );
