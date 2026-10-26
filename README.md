@@ -32,13 +32,3 @@ I'm in the process of moving my blog posts from `.json` files to a MySQL databas
 of the routing into the Express server. Once that is done, I'll add pagination to the Blog page
 (for when I have enough posts to need it...), separate URLs for each post, archive pages by month,
 and pages for each tag.
-
-I also have plans to update the styling of my [Ukulele Chords](https://kirstenmalin.com/projects)
-project to match the rest of my site, now that it's publicly available, rather than only for my own
-use. I'd like to make the project more DRY, especially in regards to the HTML files, but I still
-have the constraint that I need it to be able to run independently and locally on my phone via
-[Termux](https://termux.dev/en/) while I'm playing the ukulele. I've had some trouble trying to
-get Vite to run in Termux. Apparently, there are known issues, and a fix has been implemented, but
-for whatever reason, my particular flavor of Android isn't playing well with it. I could just load
-the production site, but that would defeat the purpose of being able to easily and quickly edit
-lyrics and chords on the fly.
