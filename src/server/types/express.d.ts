@@ -1,7 +1,9 @@
+import type { ReactNode } from 'react';
+
 declare global {
   namespace Express {
     interface Request {
-      blogPosts?: any[];
+      pageContent?: ReactNode;
       pageTitle?: string;
     }
   }

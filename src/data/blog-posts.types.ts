@@ -24,7 +24,7 @@ export type BlogPost = {
    * ISO date string yyyy-mm-dd
    */
   date: string;
-  tags: Tag[];
+  tags?: Tag[];
   title: string;
 }
 

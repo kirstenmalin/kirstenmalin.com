@@ -1,23 +1,9 @@
 import mysqlx from '@mysql/xdevapi';
+import type { PostArray, PostObject } from '#types/blog-posts.types';
 
 const columns = ['post_id', 'date', 'slug', 'title', 'content'] as const;
 
-type PostObject = {
-  post_id: number;
-  date: any;
-  slug: string;
-  title: string;
-  content: string[] | string;
-};
-type PostArray = [
-  PostObject['post_id'],
-  PostObject['date'],
-  PostObject['slug'],
-  PostObject['title'],
-  PostObject['content']
-];
-
-export default async function getBlogPosts() {
+export default async function getBlogPosts(): Promise<PostObject[]> {
   const config = {
     host: process.env.DB_HOST || '',
     password: process.env.DB_PASSWORD || '',
@@ -45,5 +31,6 @@ export default async function getBlogPosts() {
     return posts;
   } catch (error) {
     console.error('Database error:', error);
+    return [];
   }
 }

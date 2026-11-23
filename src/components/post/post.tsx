@@ -13,7 +13,7 @@ export default function Post({ content, date, hasDivider, tags, title }: PostPro
       <SectionHeading id={postId}>{title}</SectionHeading>
       <time dateTime={date}>{date}</time>
       { content }
-      <PostTags tags={tags} />
+      {tags && <PostTags tags={tags} />}
     </article>
   );
 }

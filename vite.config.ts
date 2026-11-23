@@ -19,6 +19,7 @@ export default defineConfig(({ isSsrBuild }) => ({
       '#pages': path.resolve(import.meta.dirname, './src/pages'),
       '#public': path.resolve(import.meta.dirname, './public'),
       '#server': path.resolve(import.meta.dirname, './src/server'),
+      '#types': path.resolve(import.meta.dirname, './src/types'),
       '#utils': path.resolve(import.meta.dirname, './src/utils'),
     },
   },

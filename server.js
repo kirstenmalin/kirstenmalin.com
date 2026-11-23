@@ -39,14 +39,14 @@ if (!isProduction) {
   });
   app.use(vite.middlewares);
   ukuleleRouter = (await import('./ukulele/server/router.js')).default;
-  blogMiddleware = (await vite.ssrLoadModule('/src/server/blog-middleware.ts')).default;
+  blogMiddleware = (await vite.ssrLoadModule('/src/server/blog-middleware.tsx')).default;
 } else {
   const compression = (await import('compression')).default;
   const sirv = (await import('sirv')).default;
   app.use(compression());
   app.use(base, sirv(path.join(import.meta.dirname, '/dist/client'), { extensions: [] }));
   ukuleleRouter = (await import(path.join(import.meta.dirname, '/ukulele/server/router.js'))).default;
-  blogMiddleware = (await import(path.join(import.meta.dirname, '/dist/server/blog-middleware.ts'))).default;
+  blogMiddleware = (await import(path.join(import.meta.dirname, '/dist/server/blog-middleware.tsx'))).default;
 }
 
 app.use('/projects/ukulele', ukuleleRouter);
@@ -74,7 +74,7 @@ app.use('*all', async (req, res) => {
       render = (await import(path.join(import.meta.dirname, '/dist/server/entry-server.js'))).render;
     }
 
-    const rendered = render(url);
+    const rendered = render(url, req.pageContent);
 
     const html = template
       .replace('<!--app-title-->', `${(req.pageTitle ?? '')}Kirsten Malin, Frontend Software Engineer`)
