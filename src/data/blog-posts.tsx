@@ -129,30 +129,28 @@ const blogPosts: BlogPosts = [
         image does not contain the exact text that displays. Instead, it gives the information that
         the set of images as a whole are conveying, written just like an advertisement blurb.
       </p>
-      <Figure
-        alt="Fahlo email with images sharks and bracelets with hammerhead shark beads. 3 New Bracelets. 1 Epic Partnership. Discovery Shark Week X Fahlo. Tidal Wave, Anemone, Deep Sea. Follow the Frenzy! We teamed up with Discovery Shark Week to celebrate the hammerhead hysteria! Hook yours before they're gone with the tide. Track a hammerhead. Look out for a fin! You might just spot your shark on TV."
-        caption="An email about sharks with images displayed. Note the text that is embedded in the images."
-        float='inline-start'
-        src="/images/fahlo-email-images-2026-07-01.jpg"
-      />
-      <Figure
-        alt="Fahlo email with images of a cheetah and cheetah plushies. Introducing: Cheetah Tracking Plush. Track a real cheetah in the wild before they leave with Season 1. Shop Now. Discover new adventures through the grasslands of Namibia. Shop Now."
-        caption="An email about cheetahs with images displayed. Note the text that is embedded in the images."
-        float='inline-end'
-        src="/images/fahlo-email-images-2026-09-27.jpg"
-      />
-      <Figure
-        alt="Fahlo email showing alt text for several images, reading: Shark week is approaching! There are 3 new bracelets waiting just below the surface! Three new bracelets and one epic partnership have arrived as Fahlo teams up with Discovery Shark Week to celebrate the hammerhead hysteria. Track a hammerhead before they are gone with the tide. The Hammerhead tracking bracelet is come in 3 new colors! Shop the Tidal Wave bead color now! The Hammerhead tracking bracelet is come in 3 new colors! Shop the Anemone bead color now! The Hammerhead tracking bracelet is come in 3 new colors! Shop the Deep Sea bead color now! The hammerhead hysteria is here thanks to the Discovery Shark Week and Fahlo partnership. Track a real hammerhead shark with one of three new bracelet designs before they swim away with the tide. Follow the frenzy and celebrate Discovery Shark Week with Fahlo's newest collection of hammerhead tracking bracelets. Track a hammerhead today and keep an eye out, your shark might just make an appearance on TV."
-        caption="The shark email with images hidden. The alt text conveys the intent and message of the images, rather than describing the images themselves."
-        float='inline-start'
-        src="/images/fahlo-email-alt-text-2026-07-01.png"
-      />
-      <Figure
-        alt="Fahlo email showing alt text: Don’t miss out! 🐆 Our Season 1 journeys are wrapping up, which means it’s your last chance to grab a tracking plush before they’re gone! Introducing the Cheetah Tracking Plush! Cuddle a soft companion while you track a real-life cheetah across the savanna. Start tracking a real wild cheetah today! Secure your spot in Season 1 of Wild Journeys before it closes. Every tracking experience directly funds wildlife conservation and protects endangered cheetah habitats. Shop now and gear up for new adventures through the wild grasslands of Namibia. A real wild cheetah is on the move right now. Will you follow her journey? Shop now!"
-        caption="The cheetah email with images hidden. The alt text conveys the intent and message of the images, rather than describing the images themselves."
-        float='inline-end'
-        src="/images/fahlo-email-alt-text-2026-09-27.png"
-      />
+      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '2em' }}>
+        <Figure
+          alt="Fahlo email with images sharks and bracelets with hammerhead shark beads. 3 New Bracelets. 1 Epic Partnership. Discovery Shark Week X Fahlo. Tidal Wave, Anemone, Deep Sea. Follow the Frenzy! We teamed up with Discovery Shark Week to celebrate the hammerhead hysteria! Hook yours before they're gone with the tide. Track a hammerhead. Look out for a fin! You might just spot your shark on TV."
+          caption="An email about sharks with images displayed. Note the text that is embedded in the images."
+          src="/images/fahlo-email-images-2026-07-01.jpg"
+        />
+        <Figure
+          alt="Fahlo email with images of a cheetah and cheetah plushies. Introducing: Cheetah Tracking Plush. Track a real cheetah in the wild before they leave with Season 1. Shop Now. Discover new adventures through the grasslands of Namibia. Shop Now."
+          caption="An email about cheetahs with images displayed. Note the text that is embedded in the images."
+          src="/images/fahlo-email-images-2026-09-27.jpg"
+        />
+        <Figure
+          alt="Fahlo email showing alt text for several images, reading: Shark week is approaching! There are 3 new bracelets waiting just below the surface! Three new bracelets and one epic partnership have arrived as Fahlo teams up with Discovery Shark Week to celebrate the hammerhead hysteria. Track a hammerhead before they are gone with the tide. The Hammerhead tracking bracelet is come in 3 new colors! Shop the Tidal Wave bead color now! The Hammerhead tracking bracelet is come in 3 new colors! Shop the Anemone bead color now! The Hammerhead tracking bracelet is come in 3 new colors! Shop the Deep Sea bead color now! The hammerhead hysteria is here thanks to the Discovery Shark Week and Fahlo partnership. Track a real hammerhead shark with one of three new bracelet designs before they swim away with the tide. Follow the frenzy and celebrate Discovery Shark Week with Fahlo's newest collection of hammerhead tracking bracelets. Track a hammerhead today and keep an eye out, your shark might just make an appearance on TV."
+          caption="The shark email with images hidden. The alt text conveys the intent and message of the images, rather than describing the images themselves."
+          src="/images/fahlo-email-alt-text-2026-07-01.png"
+        />
+        <Figure
+          alt="Fahlo email showing alt text: Don’t miss out! 🐆 Our Season 1 journeys are wrapping up, which means it’s your last chance to grab a tracking plush before they’re gone! Introducing the Cheetah Tracking Plush! Cuddle a soft companion while you track a real-life cheetah across the savanna. Start tracking a real wild cheetah today! Secure your spot in Season 1 of Wild Journeys before it closes. Every tracking experience directly funds wildlife conservation and protects endangered cheetah habitats. Shop now and gear up for new adventures through the wild grasslands of Namibia. A real wild cheetah is on the move right now. Will you follow her journey? Shop now!"
+          caption="The cheetah email with images hidden. The alt text conveys the intent and message of the images, rather than describing the images themselves."
+          src="/images/fahlo-email-alt-text-2026-09-27.png"
+        />
+      </div>
       <p>
         As you can see, writing good alt text is very situational.
       </p>
