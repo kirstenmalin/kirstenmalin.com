@@ -1,4 +1,5 @@
 import Code from '#components/code';
+import Figure from '#components/figure';
 import Link from '#components/link';
 import SubHeading from '#components/sub-heading';
 import type { BlogPosts } from './blog-posts.types';
@@ -10,6 +11,153 @@ const blogPosts: BlogPosts = [
   //   tags: [],
   //   content: (<></>),
   // },
+  {
+    date: '2026-11-23',
+    title: '',
+    tags: ['accessibility', 'user experience'],
+    content: (<>
+      <p>
+        Alt text on images as an accessibility requirement is interesting to me because it's trivial
+        to determine whether it exists but non-trivial to determine whether it's good.
+      </p>
+      <p>
+        The idea behind image alt text is to give people who can't see the image the same
+        information as people who can see it. This means that the description for an image depends
+        on not just what's in the image, but also why the image is there. One of the earliest
+        examples I ran across for this was a painting of a guy in a suit and stovepipe hat. Is the
+        article that the image accompanies about the artist who painted the portrait? Maybe the
+        description needs to be about the art style. Or is the article about men's fashion in the
+        1860's? The alt text should describe the suit and hat. But if the article is about Abraham
+        Lincoln, then the alt text needs to say that it's Abraham Lincoln.
+      </p>
+      <p>
+        As I have been paying more attention to it, I have run across some excellent alt text and
+        some&hellip; less good alt text. I'd like to share a few examples, starting with the bad
+        and ending with the good.
+      </p>
+      <SubHeading>
+        Sort of descriptive but useless
+      </SubHeading>
+      <Figure
+        alt="Example of bad alt text."
+        caption="Screenshot from my phone of the offending alt text, along with the blue circle in question"
+        float="inline-end"
+        src="/images/ai-aria-label 20250926_232010.jpg"
+      />
+      <p>
+        I ran across this example when I was looking through a list of items, where some items had
+        badges or indicators of some sort. The badges were small, blue circles with tiny white text
+        that was illegible when I zoomed in. I couldn't find any legend or key anywhere to explain
+        the badges, so I checked the alt text, hoping that it contained the image's text.
+      </p>
+      <p>Nope. No luck.</p>
+      <p>
+        The alt text read: "A blue circle with white text AI-generated content may be incorrect."
+      </p>
+      <p>
+        That alt text is not inaccurate, but it is worse than useless. I guess it gives screen
+        reader users the exact same experience I had while looking at the page, so we both know that
+        the image is a blue circle with white text, but there are two problems with this:
+      </p>
+      <ol>
+        <li>I still don't know what the image means.</li>
+        <li>
+          Screen reader users who can't see the image don't know that they are getting the same
+          (lack of) information as sighted users. If all I had to go on was that alt text, I would
+          assume that the "white text" on the "blue circle" was legible to people who could see it.
+          This would make me feel pretty excluded. I can only imagine how people feel when they have
+          to deal with this sort of thing on a daily basis.
+        </li>
+      </ol>
+      <p>
+        The solution: Make the alt text be the actual text that's in the image, and add a key
+        somewhere on the page for sighted users.
+      </p>
+      <SubHeading>Accurate, but gives away the game</SubHeading>
+      <p>
+        I ran across this one yesterday as I was going through a <Link href="https://www.marinebio.org/creatures/ocean-quizzes/marine-biology/">
+          marine biology quiz
+        </Link> with my kids.
+      </p>
+      <Figure
+        alt="Multiple-choice question with an image whose alt text contains the answer"
+        caption="The quiz question next to the devtools accessibility tree, which shows the image's alt text"
+        src="/images/alt-text-gives-quiz-answer-2026-11-23.png"
+      />
+      <p>
+        The quiz question asks, "Which NASA satellite instrument has been widely used to measure
+        sea-surface temperature and ocean color?" The possible answers are MODIS, GPS, LIDAR, and
+        SONAR. As we were going through the quiz, I checked out the alt text for some of the images,
+        which on my phone takes just a long-press on the image to pull up,
+        because I was curious about what would be described. Some of the pictures showed fish to
+        help illustrate the question, and the alt text said what kind of fish it was, which was
+        cool and informative and not what the question was asking. I happened to look at the alt
+        text for this question's image before reading the question. Hey, why not? I like space. I
+        thought it would say something like, "A satellite in orbit around Earth."
+      </p>
+      <p>
+        Nope, the alt text was "MODIS", which was the answer to the question. This is not actually
+        good alt text in this situation because it gives screen reader users (and people like me
+        who like to poke into things) information that they shouldn't have. Here's a description of
+        how to handle this situation
+        from <Link href="https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html">
+          Understanding SC 1.1.1 Non-text Content (Level A)
+        </Link>:
+      </p>
+      <blockquote>
+        Test: If non-text content is a test or exercise that would be invalid if presented in text,
+        then text alternatives at least provide descriptive identification of the non-text content.
+      </blockquote>
+      <p>
+        In this case, we were going through the quiz for fun, so it's not a big deal, but if this
+        had been an actual test for school, giving away the answer in the alt text would be
+        a problem.
+      </p>
+      <SubHeading>The best alt text I've seen</SubHeading>
+      <p>
+        Last, I'd like to share the best alt text I've ever seen, which comes from marketing emails
+        from <Link href="https://myfahlo.com">Fahlo</Link>, which is a cool website where you can buy
+        a bracelet or a plushie animal that comes with a QR code that lets you track an animal's
+        movements on their app, and they donate part of their profits to organizations that help
+        the kind of animals that you're tracking. I first ran across Fahlo when I bought one of
+        their sea turtle bracelets at the local aquarium's gift shop.
+      </p>
+      <p>
+        Anyway, once I started getting promotional emails from them, I was pleasantly surprised
+        by how awesome their alt text is. The emails are entirely images, aside from the footer
+        with the unsubscribe link. What I found really interesting is that the alt text for each
+        image does not contain the exact text that displays. Instead, it gives the information that
+        the set of images as a whole are conveying, written just like an advertisement blurb.
+      </p>
+      <Figure
+        alt="Fahlo email with images sharks and bracelets with hammerhead shark beads. 3 New Bracelets. 1 Epic Partnership. Discovery Shark Week X Fahlo. Tidal Wave, Anemone, Deep Sea. Follow the Frenzy! We teamed up with Discovery Shark Week to celebrate the hammerhead hysteria! Hook yours before they're gone with the tide. Track a hammerhead. Look out for a fin! You might just spot your shark on TV."
+        caption="An email about sharks with images displayed. Note the text that is embedded in the images."
+        float='inline-start'
+        src="/images/fahlo-email-images-2026-07-01.jpg"
+      />
+      <Figure
+        alt="Fahlo email with images of a cheetah and cheetah plushies. Introducing: Cheetah Tracking Plush. Track a real cheetah in the wild before they leave with Season 1. Shop Now. Discover new adventures through the grasslands of Namibia. Shop Now."
+        caption="An email about cheetahs with images displayed. Note the text that is embedded in the images."
+        float='inline-end'
+        src="/images/fahlo-email-images-2026-09-27.jpg"
+      />
+      <Figure
+        alt="Fahlo email showing alt text for several images, reading: Shark week is approaching! There are 3 new bracelets waiting just below the surface! Three new bracelets and one epic partnership have arrived as Fahlo teams up with Discovery Shark Week to celebrate the hammerhead hysteria. Track a hammerhead before they are gone with the tide. The Hammerhead tracking bracelet is come in 3 new colors! Shop the Tidal Wave bead color now! The Hammerhead tracking bracelet is come in 3 new colors! Shop the Anemone bead color now! The Hammerhead tracking bracelet is come in 3 new colors! Shop the Deep Sea bead color now! The hammerhead hysteria is here thanks to the Discovery Shark Week and Fahlo partnership. Track a real hammerhead shark with one of three new bracelet designs before they swim away with the tide. Follow the frenzy and celebrate Discovery Shark Week with Fahlo's newest collection of hammerhead tracking bracelets. Track a hammerhead today and keep an eye out, your shark might just make an appearance on TV."
+        caption="The shark email with images hidden. The alt text conveys the intent and message of the images, rather than describing the images themselves."
+        float='inline-start'
+        src="/images/fahlo-email-alt-text-2026-07-01.png"
+      />
+      <Figure
+        alt="Fahlo email showing alt text: Don’t miss out! 🐆 Our Season 1 journeys are wrapping up, which means it’s your last chance to grab a tracking plush before they’re gone! Introducing the Cheetah Tracking Plush! Cuddle a soft companion while you track a real-life cheetah across the savanna. Start tracking a real wild cheetah today! Secure your spot in Season 1 of Wild Journeys before it closes. Every tracking experience directly funds wildlife conservation and protects endangered cheetah habitats. Shop now and gear up for new adventures through the wild grasslands of Namibia. A real wild cheetah is on the move right now. Will you follow her journey? Shop now!"
+        caption="The cheetah email with images hidden. The alt text conveys the intent and message of the images, rather than describing the images themselves."
+        float='inline-end'
+        src="/images/fahlo-email-alt-text-2026-09-27.png"
+      />
+      <p>
+        As you can see, writing good alt text is very situational.
+      </p>
+    </>),
+  },
   {
     date: '2026-10-20',
     title: 'Some observations on component libraries',
