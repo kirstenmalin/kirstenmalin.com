@@ -1,4 +1,5 @@
 .post {
+  clear: both;
   margin: 0 0 3rem;
 
   &:last-of-type {
